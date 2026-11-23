@@ -13,7 +13,7 @@ int main(void)
     for (;;)
     {
         printf("\n=== Contact Book ===\n");
-        printf("1.Add\n2.Show\n3.Find\n4.Delete\n0.Exit\n");
+        printf("1.Add\n2.Show\n3.Find\n4. Delete\n0.Exit\n");
         printf("Choice: ");
 
         if (scanf("%d", &choice) != 1)
