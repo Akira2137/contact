@@ -1,13 +1,17 @@
 CC      = gcc
 CFLAGS  = -Wall -Wextra -g
 
-TARGET  = contact
+BIN     = bin
+TARGET  = $(BIN)/contact
 OBJS    = main.o contact.o
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS)
+$(TARGET): $(OBJS) | $(BIN)
 	$(CC) $(OBJS) -o $(TARGET)
+
+$(BIN):
+	mkdir -p $(BIN)
 
 %.o: %.c contact.h
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -15,4 +19,4 @@ $(TARGET): $(OBJS)
 clean:
 	rm -f $(OBJS) $(TARGET)
 
-.PHONY: all clean rebuild
+.PHONY: all clean
