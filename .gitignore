@@ -1,4 +1,11 @@
 *.o
+*.out
+a.out
+anothersize
+floatprecision
+overflow
+specmatrix
+whollytypesizeof
 contact
 contacts.dat
 *.bak
